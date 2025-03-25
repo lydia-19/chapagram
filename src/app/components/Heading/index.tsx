@@ -25,7 +25,7 @@ const Heading = ({
 
   return (
     <Component
-      className={`${sizeClasses[size]} ${className} from-blue-1 to-blue-2 bg-gradient-to-r bg-clip-text font-bold text-transparent`}
+      className={`${sizeClasses[size]} ${className} text-gradient font-bold`}
     >
       {children}
     </Component>

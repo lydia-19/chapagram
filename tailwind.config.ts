@@ -29,15 +29,35 @@ export default {
         "heading-sm": ["82px", "105%"],
         "heading-xs": ["68px", "105%"],
         "heading-xxs": ["57px", "90%"],
+        "paragraph-sm": ["15px", "normal"],
+        "paragraph-md": ["22px", "normal"],
+        "paragraph-lg": ["26px", "normal"],
       },
       boxShadow: {
         button: "3px 5px 4.5px 0px rgba(0, 75, 147, 0.35)",
       },
       borderRadius: {
+        cardLg: "32px",
+        cardMd: "29px",
         button: "64px",
       },
       minWidth: {
         button: "185px",
+        card: "210px",
+      },
+      width: {
+        card: "210px",
+      },
+      height: {
+        card: "219px",
+      },
+      padding: {
+        cardBorder: "3px",
+        card: "12px",
+      },
+      spacing: {
+        dividerHeight: "42px",
+        dividerWidth: "2px",
       },
     },
   },

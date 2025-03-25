@@ -42,3 +42,9 @@ img {
   height: auto;
   display: block;
 }
+
+@layer components {
+  .text-gradient {
+    @apply from-blue-1 to-blue-2 bg-gradient-to-r bg-clip-text text-transparent;
+  }
+}
