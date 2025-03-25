@@ -42,14 +42,17 @@ export default {
         button: "64px",
       },
       minWidth: {
-        button: "185px",
         card: "210px",
       },
       width: {
         card: "210px",
+        logoSm: "107px",
+        logoMd: "240px",
       },
       height: {
         card: "219px",
+        logoSm: "28px",
+        logoMd: "41px",
       },
       padding: {
         cardBorder: "3px",

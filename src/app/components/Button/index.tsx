@@ -14,7 +14,7 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const baseStyles =
-    "inline-flex items-center justify-center rounded-button px-6 py-3 text-lg font-medium transition-colors duration-200 gap-2 min-w-button";
+    "inline-flex items-center justify-center rounded-button px-4 py-2 text-xs font-medium transition-colors duration-200  md:px-6 md:py-4 md:text-base";
 
   const variantStyles = {
     primary:
