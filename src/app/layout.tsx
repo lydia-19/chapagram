@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { APP_CONFIG } from "@/config/constants";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -9,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Chapagram",
-  description: "Chapagram, all in one payment bot",
+  title: APP_CONFIG.name,
+  description: APP_CONFIG.description,
 };
 
 export default function RootLayout({

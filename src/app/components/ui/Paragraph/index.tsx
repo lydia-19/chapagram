@@ -6,7 +6,9 @@ const Paragraph = ({
   className?: string;
 }) => {
   return (
-    <p className={`text-base font-medium text-gray ${className}`}>{children}</p>
+    <p className={`text-sm font-medium text-gray lg:text-base ${className}`}>
+      {children}
+    </p>
   );
 };
 

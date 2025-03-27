@@ -12,7 +12,7 @@ const Heading = ({
   children,
   size = "lg",
   className = "",
-  as: Component = "h1",
+  as: Component = "h2",
 }: HeadingProps) => {
   const sizeClasses = {
     xl: "text-heading-xl",

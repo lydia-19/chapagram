@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Paragraph from "@components/Paragraph";
+import Paragraph from "@components/ui/Paragraph";
 
 interface CustomersProps {
   userCount?: string;
@@ -7,9 +7,9 @@ interface CustomersProps {
 
 const Customers = ({ userCount = "" }: CustomersProps) => {
   return (
-    <div className="h-card min-w-card rounded-card relative bg-white">
-      <div className="from-blue-1 to-blue-2 rounded-cardLg p-cardBorder absolute inset-0 bg-gradient-to-r">
-        <div className="rounded-cardMd h-full w-full bg-white">
+    <div className="rounded-card relative h-card min-w-card">
+      <div className="absolute inset-0 rounded-cardLg bg-gradient-to-r from-blue-1 to-blue-2 p-cardBorder">
+        <div className="h-full w-full rounded-cardMd bg-white">
           <div className="flex h-full flex-col items-center gap-2 py-3">
             <Image
               src="/images/hand-shaking.png"
@@ -22,7 +22,7 @@ const Customers = ({ userCount = "" }: CustomersProps) => {
                 <span className="text-gradient text-paragraph-lg mr-3">
                   {userCount}
                 </span>
-                <span className="from-blue-1 to-blue-2 h-dividerHeight w-dividerWidth mx-2 inline-block bg-gradient-to-r" />
+                <span className="mx-2 inline-block h-dividerHeight w-dividerWidth bg-gradient-to-r from-blue-1 to-blue-2" />
                 <span className="text-gradient text-left text-lg">
                   <span>Satisfied</span> <br />
                   <span>Users</span>
