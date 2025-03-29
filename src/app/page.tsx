@@ -10,28 +10,30 @@ import Sharing from "@components/features/Sharing";
 
 export default function Home() {
   return (
-    <div className="xxl:px-0 container mx-auto px-4 lg:px-12">
+    <>
       <Navbar />
-      <div className="mt-20 space-y-20 lg:space-y-48 xl:mt-36">
-        <section>
-          <Landing />
-        </section>
-        <section>
-          <SendReceive />
-        </section>
-        <section>
-          <SplitBills />
-        </section>
-        <section>
-          <Global />
-        </section>
-        <section>
-          <Shamo />
-        </section>
-        <section>
-          <Sharing />
-        </section>
+      <div className="xxl:px-0 h-screen space-y-24 overflow-y-auto overflow-x-hidden max-2xl:lg:snap-y max-2xl:lg:snap-mandatory max-2xl:lg:space-y-0 2xl:space-y-60">
+        <div className="container mx-auto px-4 lg:px-12">
+          <div className="mt-[64px] max-2xl:lg:h-[calc(100vh-64px)] max-2xl:lg:snap-end max-2xl:lg:snap-always">
+            <Landing />
+          </div>
+          <div className="container mx-auto lg:mt-[64px] max-2xl:lg:h-[calc(100vh-64px)] max-2xl:lg:snap-end max-2xl:lg:snap-always">
+            <SendReceive />
+          </div>
+          <div className="container mx-auto lg:mt-[64px] max-2xl:lg:h-[calc(100vh-64px)] max-2xl:lg:snap-end max-2xl:lg:snap-always">
+            <SplitBills />
+          </div>
+          <div className="container mx-auto lg:mt-[64px] max-2xl:lg:h-[calc(100vh-64px)] max-2xl:lg:snap-end max-2xl:lg:snap-always">
+            <Global />
+          </div>
+          <div className="container mx-auto lg:mt-[64px] max-2xl:lg:h-[calc(100vh-64px)] max-2xl:lg:snap-end max-2xl:lg:snap-always">
+            <Shamo />
+          </div>
+          <div className="container mx-auto lg:mt-[64px] max-2xl:lg:h-[calc(100vh-64px)] max-2xl:lg:snap-end max-2xl:lg:snap-always">
+            <Sharing />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

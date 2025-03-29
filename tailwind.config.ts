@@ -54,8 +54,8 @@ export default {
         islandSm: "100px",
         islandLg: "120px",
         camera: "8px",
-        roundBtnSm: "75px",
-        roundBtnLg: "90px",
+        roundBtnSm: "70px",
+        roundBtnLg: "75px",
       },
       height: {
         card: "219px",

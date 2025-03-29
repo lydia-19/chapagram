@@ -6,8 +6,8 @@ import { GetStartedButton } from "@components/common/GetStartedButton";
 
 const Shamo = () => {
   return (
-    <div className="flex flex-col gap-12 lg:flex-row">
-      <div className="flex-1 space-y-6">
+    <div className="flex h-full flex-col items-start gap-12 lg:flex-row">
+      <div className="flex-1 space-y-6 self-center">
         <Heading className="text-4xl !leading-none lg:text-6xl">
           Shamo!
           <br />
@@ -20,7 +20,7 @@ const Shamo = () => {
         </Paragraph>
         <GetStartedButton className="hidden lg:flex" />
       </div>
-      <div className="flex-1 self-center">
+      <div className="flex-1">
         <ImageWrapper imagePosition={{ top: 50 }} centered>
           <PhoneWrapper>
             <video

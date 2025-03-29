@@ -9,7 +9,7 @@ import { APP_CONFIG } from "@/config/constants";
 
 const Landing = () => {
   return (
-    <div className="mt-9 grid h-full grid-cols-12 gap-8 lg:gap-0">
+    <div className="grid h-full grid-cols-12 gap-8 pt-9 lg:gap-0">
       <div className="relative z-10 col-span-12 lg:col-span-5">
         <div className="flex flex-col justify-center space-y-8">
           <Heading as="h1" className="text-4xl lg:text-6xl">
@@ -40,7 +40,7 @@ const Landing = () => {
           </ImageWrapper>
         </div>
         <div className="relative col-span-12 hidden lg:block lg:w-[calc(100%*3/7)] xl:w-[calc(100%*2/7)]">
-          <div className="absolute right-0 top-[75%] h-full">
+          <div className="absolute right-0 top-[55%] h-full">
             <Customers userCount="10K+" />
           </div>
         </div>

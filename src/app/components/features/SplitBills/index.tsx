@@ -6,9 +6,9 @@ import { APP_CONFIG } from "@/config/constants";
 
 const SplitBills = () => {
   return (
-    <div className="grid grid-cols-8 gap-8 lg:gap-0">
-      <div className="col-span-12 space-y-4 lg:col-span-4 lg:max-w-[500px]">
-        <Heading className="text-4xl lg:text-8xl">
+    <div className="mt-20 grid h-full grid-cols-8 gap-8 lg:gap-0">
+      <div className="col-span-12 space-y-4 lg:col-span-4 lg:max-w-[400px]">
+        <Heading className="mt-5 text-4xl lg:text-7xl xl:mt-16">
           Split Bills,
           <br /> Share Easy
         </Heading>
@@ -18,13 +18,13 @@ const SplitBills = () => {
           right within your bot.
         </Paragraph>
       </div>
-      <div className="col-span-12 flex justify-center lg:col-span-4 lg:translate-y-20">
+      <div className="col-span-12 flex items-end justify-center lg:col-span-4">
         <ImageWrapper gradientWidth={"lg"} imagePosition={{ top: 0, left: -9 }}>
           <Image
             src="/images/split-bills.png"
             alt="Split Bills"
-            width={500}
-            height={535}
+            width={570}
+            height={600}
           />
         </ImageWrapper>
       </div>

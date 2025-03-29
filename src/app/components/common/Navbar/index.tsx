@@ -5,7 +5,7 @@ import { APP_CONFIG } from "@/config/constants";
 
 const Navbar = () => {
   return (
-    <nav className="fixed left-0 top-0 z-[9999] w-full bg-white py-4">
+    <nav className="fixed left-0 top-0 z-[9999] w-full bg-white py-2">
       <div className="xxl:px-0 container mx-auto flex items-center justify-between px-4 lg:px-12">
         <div className="relative h-logoSm w-logoSm xl:h-logoMd xl:w-logoMd">
           <Image
