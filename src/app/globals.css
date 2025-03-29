@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 a,
@@ -45,6 +45,29 @@ img {
 
 @layer components {
   .text-gradient {
-    @apply from-blue-1 to-blue-2 bg-gradient-to-r bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-1 to-blue-2 bg-clip-text text-transparent;
+  }
+  .bg-gradient {
+    @apply bg-gradient-to-b from-blue-3 via-blue-4 to-gray-1 to-gray-2;
+  }
+}
+
+/* Mobile gradient size */
+.gradient-xs {
+  width: 300px;
+}
+
+/* Desktop gradient sizes (lg breakpoint) */
+@media (min-width: 1024px) {
+  .lg\:gradient-sm {
+    width: 340px;
+  }
+
+  .lg\:gradient-md {
+    width: 500px;
+  }
+
+  .lg\:gradient-lg {
+    width: 600px;
   }
 }

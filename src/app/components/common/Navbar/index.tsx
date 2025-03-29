@@ -5,14 +5,13 @@ import { APP_CONFIG } from "@/config/constants";
 
 const Navbar = () => {
   return (
-    <nav className="z-[9999] bg-white pb-4 pt-4">
-      <div className="mx-auto flex w-full max-w-xs items-center justify-between md:max-w-xl lg:max-w-7xl">
+    <nav className="fixed left-0 top-0 z-[9999] w-full bg-white py-4">
+      <div className="xxl:px-0 container mx-auto flex items-center justify-between px-4 lg:px-12">
         <div className="relative h-logoSm w-logoSm xl:h-logoMd xl:w-logoMd">
           <Image
             src="/images/logo.svg"
             alt={APP_CONFIG.name}
-            width={140}
-            height={32}
+            fill
             priority
             className="object-contain"
           />

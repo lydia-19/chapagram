@@ -9,11 +9,14 @@ interface GetStartedButtonProps {
 }
 
 export const GetStartedButton: FC<GetStartedButtonProps> = ({
-  className,
+  className = "",
   href = EXTERNAL_LINKS.TELEGRAM_BOT,
 }) => {
   return (
-    <Button className={className} rightIcon={<ArrowRight />}>
+    <Button
+      className={`${className} flex items-center`}
+      rightIcon={<ArrowRight />}
+    >
       <a href={href} target="_blank" rel="noopener noreferrer">
         Get started
       </a>

@@ -19,9 +19,7 @@ const Customers = ({ userCount = "" }: CustomersProps) => {
             />
             <div className="flex flex-col items-center">
               <Paragraph className="flex items-center text-center font-semibold">
-                <span className="text-gradient text-paragraph-lg mr-3">
-                  {userCount}
-                </span>
+                <span className="text-gradient mr-3 text-2xl">{userCount}</span>
                 <span className="mx-2 inline-block h-dividerHeight w-dividerWidth bg-gradient-to-r from-blue-1 to-blue-2" />
                 <span className="text-gradient text-left text-lg">
                   <span>Satisfied</span> <br />

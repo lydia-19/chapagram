@@ -17,7 +17,7 @@ const PhoneWrapper = ({ children, className = "" }: PhoneWrapperProps) => {
         </div>
 
         {/* Screen container */}
-        <div className="h-phoneSm xl:h-phoneLg rounded-screenSm xl:rounded-screenLg relative w-full overflow-hidden bg-white">
+        <div className="h-phoneSm xl:h-phoneLg rounded-screenSm xl:rounded-screenLg relative w-full overflow-hidden">
           {/* Content */}
           {children}
         </div>
