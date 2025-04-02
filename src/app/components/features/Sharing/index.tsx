@@ -4,18 +4,35 @@ import PhoneWrapper from "@components/common/PhoneWrapper";
 import ShareIcon from "@icons/share.svg";
 import { EXTERNAL_LINKS } from "@/config/constants";
 import Button from "@components/ui/Button";
+import { motion } from "framer-motion";
 
 const Sharing = () => {
   return (
     <div className="flex h-full flex-col items-center justify-evenly px-4">
-      <Heading
-        as="h3"
-        className="mb-16 text-center text-2xl font-semibold !leading-snug lg:mb-8 lg:text-5xl"
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
       >
-        Share the bot, and earn rewards for every friend you bring on board.
-      </Heading>
+        <Heading
+          as="h3"
+          className="mb-16 text-center text-2xl font-semibold !leading-snug lg:mb-8 lg:text-5xl"
+        >
+          Share the bot, and earn rewards for every friend you bring on board.
+        </Heading>
+      </motion.div>
       <div className="mb-20 grid grid-cols-1 gap-12 lg:grid-cols-10">
-        <div className="relative col-span-3 hidden lg:block">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          className="relative col-span-3 hidden lg:block"
+        >
           <Image
             src="/images/woman-sharing.png"
             alt="Share with friends"
@@ -23,7 +40,7 @@ const Sharing = () => {
             height={586}
             className="object-contain"
           />
-          <button className="absolute bottom-1 right-9 flex aspect-square w-16 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 xl:w-roundBtnSm 2xl:bottom-0 2xl:right-8 2xl:w-roundBtnLg">
+          <Button className="absolute bottom-1 right-9 flex aspect-square w-16 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:lg:right-0 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
             <a
               href={EXTERNAL_LINKS.TELEGRAM_BOT}
               target="_blank"
@@ -31,10 +48,20 @@ const Sharing = () => {
             >
               <ShareIcon />
             </a>
-          </button>
-        </div>
+          </Button>
+        </motion.div>
 
-        <div className="col-span-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.8,
+            delay: 0.3,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          className="col-span-4"
+        >
           <div className="gradient-xs aspect-square h-[450px] rounded-cardSm bg-gradient-to-r from-blue-1 to-blue-2 lg:h-full lg:w-full">
             <div className="flex h-full items-center justify-center">
               <PhoneWrapper className="xl:scale-85 transform lg:scale-75">
@@ -58,9 +85,18 @@ const Sharing = () => {
               Share
             </Button>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="relative col-span-3 hidden lg:block">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          className="relative col-span-3 hidden lg:block"
+        >
           <Image
             src="/images/man-sharing.png"
             alt="Share with friends"
@@ -68,7 +104,7 @@ const Sharing = () => {
             height={586}
             className="object-contain"
           />
-          <button className="absolute bottom-1 right-9 flex aspect-square w-16 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 xl:w-roundBtnSm 2xl:bottom-0 2xl:right-8 2xl:w-roundBtnLg">
+          <Button className="absolute bottom-1 right-9 flex aspect-square w-16 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:lg:right-0 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
             <a
               href={EXTERNAL_LINKS.TELEGRAM_BOT}
               target="_blank"
@@ -76,8 +112,8 @@ const Sharing = () => {
             >
               <ShareIcon />
             </a>
-          </button>
-        </div>
+          </Button>
+        </motion.div>
       </div>
     </div>
   );
