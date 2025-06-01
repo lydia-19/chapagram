@@ -14,11 +14,10 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const baseStyles =
-    "inline-flex items-center justify-center rounded-button px-4 py-2 text-xs font-medium transition-colors duration-200  xl:px-6 xl:py-3 xl:text-base";
+    "inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition-colors duration-200 xl:px-6 xl:text-base";
 
   const variantStyles = {
-    primary:
-      "bg-blue-default text-white shadow-button hover:bg-blue-default/90",
+    primary: "bg-blue-5 text-white hover:bg-blue-default/90",
   };
 
   return (
