@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Heading from "@components/ui/Heading";
 import Paragraph from "@components/ui/Paragraph";
@@ -7,11 +9,11 @@ import { motion } from "framer-motion";
 
 const SendReceive = () => {
   return (
-    <div className="relative flex h-full flex-col items-center justify-between gap-6 lg:flex-row lg:gap-12">
-      <div className="w-full self-end lg:w-[38%]">
-        <div className="space-y-2 lg:mb-12 lg:space-y-4">
-          <Heading className="text-4xl xl:text-6xl 2xl:text-8xl">
-            Quick Send
+    <div className="relative flex h-full flex-col items-center justify-between gap-6 md:flex-row lg:gap-12">
+      <div className="mb-12 w-full lg:mb-0 lg:w-[38%] lg:self-end">
+        <div className="space-y-2 lg:mb-28 lg:space-y-4">
+          <Heading>
+            Quick <br /> Send
           </Heading>
           <Paragraph className="text-left">
             Send money instantly to anyone in your contacts. No delays, no
@@ -23,20 +25,14 @@ const SendReceive = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
+          className="hidden lg:block"
         >
-          <ImageWrapper
-            gradientWidth={"sm"}
-            imagePosition={{ top: "100%", left: 50 }}
-            className="hidden lg:block"
-          >
-            <Image
-              src="/images/woman-sending.png"
-              alt="Woman sending money"
-              width={180}
-              height={360}
-              className="object-contain"
-            />
-          </ImageWrapper>
+          <Image
+            src="/images/send.png"
+            alt="Woman sending money"
+            width={400}
+            height={530}
+          />
         </motion.div>
       </div>
       <motion.div
@@ -51,7 +47,7 @@ const SendReceive = () => {
           <ImageWrapper
             gradientWidth={"md"}
             centered
-            imagePosition={{ top: 50 }}
+            imagePosition={{ top: -20 }}
           >
             <PhoneWrapper>
               <video
@@ -61,7 +57,7 @@ const SendReceive = () => {
                 playsInline
                 className="h-full w-full object-cover"
               >
-                <source src="/videos/vid-1.mp4" type="video/mp4" />
+                <source src="/videos/send-receive.mp4" type="video/mp4" />
               </video>
             </PhoneWrapper>
           </ImageWrapper>
@@ -87,7 +83,7 @@ const SendReceive = () => {
               playsInline
               className="h-full w-full object-cover"
             >
-              <source src="/videos/vid-1.mp4" type="video/mp4" />
+              <source src="/videos/send-receive.mp4" type="video/mp4" />
             </video>
           </PhoneWrapper>
         </motion.div>
@@ -98,25 +94,19 @@ const SendReceive = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
+          className="hidden lg:block"
         >
-          <ImageWrapper
-            gradientWidth={"sm"}
-            imagePosition={{ top: 20, right: -50 }}
-            className="hidden lg:block"
-          >
-            <Image
-              src="/images/man-receiving.png"
-              alt="Man receiving money"
-              width={200}
-              height={310}
-              className="object-contain text-right"
-            />
-          </ImageWrapper>
+          <Image
+            src="/images/receive.png"
+            alt="Man receiving money"
+            width={400}
+            height={530}
+          />
         </motion.div>
 
-        <div className="mt-16 space-y-4 text-right lg:mt-12">
-          <Heading className="text-4xl xl:text-6xl 2xl:text-8xl">
-            Quick Request
+        <div className="mt-6 space-y-4 text-right lg:mt-12">
+          <Heading>
+            Quick <br /> Request
           </Heading>
           <Paragraph>
             Easily request money from friends or groups. Send a quick request

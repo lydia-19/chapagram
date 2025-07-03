@@ -1,3 +1,5 @@
+"use client";
+
 import Heading from "@components/ui/Heading";
 import Image from "next/image";
 import PhoneWrapper from "@components/common/PhoneWrapper";
@@ -15,14 +17,11 @@ const Sharing = () => {
         viewport={{ once: true }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
       >
-        <Heading
-          as="h3"
-          className="mb-16 text-center text-2xl font-semibold !leading-snug lg:mb-8 lg:text-5xl"
-        >
-          Share the bot, and earn rewards for every friend you bring on board.
+        <Heading className="my-12 text-center">
+          Share the bot, and earn rewards for every friend you bring on board
         </Heading>
       </motion.div>
-      <div className="mb-20 grid grid-cols-1 gap-12 lg:grid-cols-10">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-10">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -31,16 +30,15 @@ const Sharing = () => {
             duration: 1.5,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="relative col-span-3 hidden lg:block"
+          className="relative col-span-3 hidden md:block"
         >
           <Image
-            src="/images/woman-sharing.png"
+            src="/images/share-left.png"
             alt="Share with friends"
-            width={270}
+            width={424}
             height={586}
-            className="object-contain"
           />
-          <Button className="absolute bottom-1 right-9 flex aspect-square w-16 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:lg:right-0 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
+          <Button className="absolute bottom-1 right-3 flex aspect-square w-16 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:md:right-0 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
             <a
               href={EXTERNAL_LINKS.TELEGRAM_BOT}
               target="_blank"
@@ -60,11 +58,11 @@ const Sharing = () => {
             delay: 0.3,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="col-span-4"
+          className="md:col-span-4"
         >
-          <div className="gradient-xs aspect-square h-[450px] rounded-cardSm bg-gradient-to-r from-blue-1 to-blue-2 lg:h-full lg:w-full">
+          <div className="gradient-xs aspect-square h-[450px] rounded-cardSm bg-gradient-to-r from-blue-1 to-blue-2 md:h-full md:w-full">
             <div className="flex h-full items-center justify-center">
-              <PhoneWrapper className="xl:scale-85 transform lg:scale-75">
+              <PhoneWrapper className="xl:scale-85 transform md:scale-75">
                 <video
                   autoPlay
                   loop
@@ -77,14 +75,6 @@ const Sharing = () => {
               </PhoneWrapper>
             </div>
           </div>
-          <div className="mt-8 w-full lg:hidden">
-            <Button
-              className="w-full"
-              rightIcon={<ShareIcon className="h-4 w-4" />}
-            >
-              Share
-            </Button>
-          </div>
         </motion.div>
 
         <motion.div
@@ -95,16 +85,15 @@ const Sharing = () => {
             duration: 1.5,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="relative col-span-3 hidden lg:block"
+          className="relative col-span-3 hidden md:block"
         >
           <Image
-            src="/images/man-sharing.png"
+            src="/images/share-right.png"
             alt="Share with friends"
-            width={270}
+            width={424}
             height={586}
-            className="object-contain"
           />
-          <Button className="absolute bottom-1 right-9 flex aspect-square w-16 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:lg:right-0 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
+          <Button className="absolute bottom-1 right-3 flex aspect-square w-16 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:md:right-0 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
             <a
               href={EXTERNAL_LINKS.TELEGRAM_BOT}
               target="_blank"

@@ -1,7 +1,7 @@
 import Heading from "@components/ui/Heading";
 import Paragraph from "@components/ui/Paragraph";
-import RotatingGlobe from "@components/common/RotatingGlobe";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Global = () => {
   return (
@@ -11,21 +11,19 @@ const Global = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="mb-16 w-full"
+        className="mb-12 w-full xl:mb-16"
       >
-        <Heading className="text-center text-4xl lg:text-7xl 2xl:text-8xl">
-          Send Money Globally
-        </Heading>
+        <Heading className="text-center">Send Money Globally</Heading>
       </motion.div>
-      <div className="flex h-full flex-col flex-wrap justify-between lg:flex-row">
+      <div className="mb-12 flex h-full flex-col flex-wrap justify-between gap-5 md:mb-0 md:flex-row md:gap-0">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="w-full lg:mt-20 lg:w-1/3 lg:max-w-[400px]"
+          className="w-full md:w-1/3 md:max-w-[400px]"
         >
-          <Paragraph className="text-paragraph-md mb-2 font-semibold !text-black 2xl:text-xl">
+          <Paragraph className="text-paragraph-md mb-2 font-semibold uppercase !text-black 2xl:text-xl">
             Seamless Global Transfers
           </Paragraph>
           <Paragraph>
@@ -34,23 +32,15 @@ const Global = () => {
             secure system ensures your funds arrive fast.
           </Paragraph>
         </motion.div>
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="w-full lg:w-1/3"
-        >
-          <RotatingGlobe />
-        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="w-full text-right lg:mt-20 lg:w-1/3 lg:max-w-[400px]"
+          className="w-full md:w-1/3 md:max-w-[400px] md:text-right"
         >
-          <Paragraph className="text-paragraph-md mb-2 font-semibold !text-black 2xl:text-xl">
+          <Paragraph className="text-paragraph-md mb-2 font-semibold uppercase !text-black 2xl:text-xl">
             Fast, Secure, and Affordable
           </Paragraph>
           <Paragraph>
@@ -58,6 +48,22 @@ const Global = () => {
             system delivers money globally in seconds, keeping your transactions
             smooth and hassle-free.
           </Paragraph>
+        </motion.div>
+      </div>
+      <div className="relative flex justify-center">
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
+          <Image
+            src="/images/half-globe.png"
+            alt="Global"
+            width={1000}
+            height={1000}
+          />
+          <div className="pointer-events-none absolute -bottom-5 left-0 h-24 w-full bg-gradient-to-t from-white to-transparent blur-md" />
         </motion.div>
       </div>
     </div>

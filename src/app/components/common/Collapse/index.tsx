@@ -25,7 +25,7 @@ const Collapse: React.FC<CollapseProps> = ({ items }) => {
         return (
           <div
             key={idx}
-            className="bg-gray-4 rounded-xl shadow-sm transition-all duration-200"
+            className="rounded-xl bg-gray-4 shadow-sm transition-all duration-200 hover:bg-blue-10"
           >
             <button
               className="flex w-full items-center justify-between gap-1 px-6 py-6 text-left"

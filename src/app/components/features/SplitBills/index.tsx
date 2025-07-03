@@ -1,5 +1,4 @@
 import Heading from "@components/ui/Heading";
-import ImageWrapper from "@components/common/ImageWrapper";
 import Paragraph from "@components/ui/Paragraph";
 import Image from "next/image";
 import { APP_CONFIG } from "@/config/constants";
@@ -7,7 +6,7 @@ import { motion } from "framer-motion";
 
 const SplitBills = () => {
   return (
-    <div className="mt-20 grid h-full grid-cols-8 gap-8 lg:gap-0">
+    <div className="mt-20 flex h-full flex-col gap-8 md:flex-row md:gap-0">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -16,7 +15,7 @@ const SplitBills = () => {
           duration: 1.2,
           ease: [0.25, 0.1, 0.25, 1],
         }}
-        className="col-span-12 space-y-4 lg:col-span-4 lg:max-w-[400px] 2xl:max-w-[500px]"
+        className="mr-4 basis-full space-y-4 md:basis-2/5"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -28,7 +27,7 @@ const SplitBills = () => {
             ease: "easeOut",
           }}
         >
-          <Heading className="mt-5 text-4xl lg:text-7xl xl:mt-16 2xl:text-8xl">
+          <Heading className="mt-5 xl:mt-16">
             Split Bills,
             <br /> Share Easy
           </Heading>
@@ -58,16 +57,17 @@ const SplitBills = () => {
           duration: 1.8,
           ease: [0.16, 1, 0.3, 1],
         }}
-        className="col-span-12 flex items-end justify-center lg:col-span-4"
+        className="flex basis-full items-end justify-center md:basis-3/5"
       >
-        <ImageWrapper gradientWidth={"lg"} imagePosition={{ top: 0, left: -9 }}>
+        <div className="relative">
           <Image
-            src="/images/split-bills.png"
+            src="/images/split-bill.png"
             alt="Split Bills"
-            width={570}
-            height={600}
+            width={700}
+            height={530}
+            className="object-cover"
           />
-        </ImageWrapper>
+        </div>
       </motion.div>
     </div>
   );

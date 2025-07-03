@@ -18,9 +18,9 @@ html {
 
 body {
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 h1,
@@ -45,20 +45,27 @@ img {
 
 @layer components {
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-1 to-blue-2 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-1 to-blue-11 bg-clip-text text-transparent;
   }
-  .bg-gradient {
-    @apply bg-gradient-to-b from-blue-3 via-blue-4 to-gray-1 to-gray-2;
-  }
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    to bottom,
+    #003568,
+    #a1c4e6,
+    #deebf6c7,
+    #d2e3f345
+  );
 }
 
 /* Mobile gradient size */
 .gradient-xs {
-  width: 300px;
+  width: 330px;
 }
 
-/* Desktop gradient sizes (lg breakpoint) */
-@media (min-width: 1024px) {
+/* Desktop gradient sizes (xl breakpoint) */
+@media (min-width: 1280px) {
   .lg\:gradient-sm {
     width: 340px;
   }

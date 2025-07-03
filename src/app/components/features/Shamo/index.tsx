@@ -1,3 +1,4 @@
+"use client";
 import Heading from "@components/ui/Heading";
 import ImageWrapper from "@components/common/ImageWrapper";
 import Paragraph from "@components/ui/Paragraph";
@@ -7,13 +8,13 @@ import { motion } from "framer-motion";
 
 const Shamo = () => {
   return (
-    <div className="flex h-full flex-col items-start gap-12 lg:flex-row">
+    <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:gap-12 md:pt-32">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="flex-1 space-y-6 self-center"
+        className="flex-2 mb-12 space-y-5 self-center md:space-y-10"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,11 +22,10 @@ const Shamo = () => {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
         >
-          <Heading className="text-4xl !leading-none lg:text-6xl 2xl:text-8xl">
+          <Heading className="text-center md:text-left">
             Shamo!
             <br />
-            Play with Pals,
-            <br /> Spin for cash{" "}
+            Play with Pals, Spin for cash
           </Heading>
         </motion.div>
         <motion.div
@@ -34,7 +34,7 @@ const Shamo = () => {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
         >
-          <Paragraph className="font-medium">
+          <Paragraph className="text-center font-medium md:text-left">
             Experience the thrill of chance with Shamo. Spin the wheel, win
             money. It&apos;s a party in your pocket, with fun as the focus!
           </Paragraph>
@@ -44,8 +44,9 @@ const Shamo = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+          className="flex justify-center md:justify-start"
         >
-          <GetStartedButton className="hidden lg:flex" />
+          <GetStartedButton />
         </motion.div>
       </motion.div>
       <motion.div
@@ -58,7 +59,7 @@ const Shamo = () => {
         }}
         className="flex-1 self-center"
       >
-        <ImageWrapper imagePosition={{ top: 50 }} centered>
+        <ImageWrapper imagePosition={{ top: -20 }} centered>
           <PhoneWrapper>
             <video
               autoPlay
@@ -67,7 +68,7 @@ const Shamo = () => {
               playsInline
               className="h-full w-full object-cover"
             >
-              <source src="/videos/vid-1.mp4" type="video/mp4" />
+              <source src="/videos/shamo.mp4" type="video/mp4" />
             </video>
           </PhoneWrapper>
         </ImageWrapper>

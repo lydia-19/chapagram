@@ -7,32 +7,37 @@ import SendReceive from "@components/features/SendReceive";
 import SplitBills from "@components/features/SplitBills";
 import Shamo from "@components/features/Shamo";
 import Sharing from "@components/features/Sharing";
-
+import FAQ from "./components/features/FAQ";
+import Footer from "./components/features/Footer";
 export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="xxl:px-0 overflow-y-auto overflow-x-hidden lg:mt-[64px] lg:h-[calc(100vh-64px)] lg:snap-y lg:snap-mandatory">
-        <div className="container mx-auto h-full space-y-24 px-4 lg:space-y-0 lg:px-12 2xl:space-y-60">
-          <div className="h-full overflow-hidden lg:snap-end lg:snap-always">
+      <div>
+        <div className="container mx-auto mt-20 h-full space-y-12 px-4 md:px-12 lg:space-y-24">
+          <div>
             <Landing />
           </div>
-          <div className="h-full overflow-hidden lg:snap-end lg:snap-always">
+          <div>
             <SendReceive />
           </div>
-          <div className="h-full overflow-hidden lg:snap-end lg:snap-always">
+          <div>
             <SplitBills />
           </div>
-          <div className="h-full overflow-hidden lg:snap-end lg:snap-always">
-            <Global />
-          </div>
-          <div className="h-full overflow-hidden lg:snap-end lg:snap-always">
+          <div>
             <Shamo />
           </div>
-          <div className="h-full overflow-hidden lg:snap-end lg:snap-always">
+          <div>
+            <Global />
+          </div>
+          <div>
             <Sharing />
           </div>
+          <div>
+            <FAQ />
+          </div>
         </div>
+        <Footer />
       </div>
     </>
   );

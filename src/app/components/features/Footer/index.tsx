@@ -41,14 +41,13 @@ const Footer = () => {
   return (
     <footer className="mt-20 overflow-x-hidden">
       <div className="container mx-auto">
-        <div className="relative mx-0 flex flex-col gap-10 bg-blue-10 px-6 py-4 md:mx-6 md:flex-row md:gap-0 md:rounded-2xl xl:mx-0">
-          <div className="relative order-2 flex flex-1 items-center justify-center md:order-1">
+        <div className="relative mx-0 flex flex-col gap-10 bg-blue-10 px-6 py-4 md:mx-6 md:flex-row md:gap-0 md:rounded-2xl xl:mx-0 2xl:py-10">
+          <div className="relative order-2 -mb-4 flex flex-1 items-end justify-center md:order-1 2xl:-mb-10">
             <Image
               src="/images/footer-phone.png"
               alt="Chapagram"
               width={450}
-              height={750}
-              className="w-full scale-125 object-contain"
+              height={450}
             />
           </div>
           <div className="order-1 flex flex-1 flex-col items-center justify-center gap-6 md:order-2 md:items-start xl:py-10">
@@ -56,7 +55,7 @@ const Footer = () => {
               Manage <br />
               Your Money <br /> on the Go
             </Heading>
-            <Paragraph className="text-center text-gray-default md:text-left">
+            <Paragraph className="text-center md:text-left">
               Open your telegram, start using chapagram and take control of your
               finances — anytime, anywhere.
             </Paragraph>
@@ -74,7 +73,7 @@ const Footer = () => {
               <div className="h-2 w-2 rounded-full bg-gray-3"></div>
             </div>
             <div className="mt-5 md:mt-0">
-              <div className="relative mb-8 h-logoSm w-logoSm xl:h-logoMd xl:w-logoMd">
+              <div className="relative mb-8 h-logoSm w-logoSm lg:h-logoMd lg:w-logoMd">
                 <Image
                   src="/images/logo-white.svg"
                   alt={`${APP_CONFIG.name} Logo`}
@@ -140,7 +139,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="bg-blue-15 fixed bottom-0 left-0 right-0 flex flex-col justify-stretch px-6 py-3 md:hidden">
+        <div className="fixed bottom-0 left-0 right-0 z-50 flex flex-col justify-stretch bg-blue-15 px-6 py-3 md:hidden">
           <GetStartedButton variant="sticky" />
         </div>
       </div>
