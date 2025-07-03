@@ -31,11 +31,11 @@ const testimonies = [
 const Landing = () => {
   return (
     <div className="flex flex-col gap-6">
-      <div className="mx-auto flex flex-col items-center justify-center space-y-4 lg:space-y-10">
+      <div className="mx-auto flex flex-col items-center justify-center space-y-4 lg:space-y-8">
         <Heading as="h1" className="text-center">
           One Telegram bot <br /> total payment <br /> freedom
         </Heading>
-        <Paragraph className="w-full text-center xl:text-2xl">
+        <Paragraph className="w-full text-center !font-normal xl:text-2xl">
           Experience the synergy of seamlessly combined payment tools. <br />
           {APP_CONFIG.name} brings all your transaction needs together in one
           intuitive bot.
@@ -60,10 +60,10 @@ const Landing = () => {
           </ImageWrapper>
         </div>
 
-        <div className="top-1/2 hidden -translate-y-1/2 lg:absolute lg:left-[14%] lg:block xl:left-[5%] 2xl:left-[12%]">
+        <div className="absolute top-1/2 hidden -translate-y-1/2 lg:left-[14%] lg:block xl:left-[5%] 2xl:left-[12%]">
           <TestimonyCarousel testimonies={testimonies} />
         </div>
-        <div className="-top-10 right-3 hidden lg:absolute lg:block xl:-top-0 xl:right-[5%] 2xl:right-[14%]">
+        <div className="top-4/5 absolute right-0 hidden md:block lg:-top-10 lg:right-3 xl:-top-0 xl:right-[5%] 2xl:right-[14%]">
           <Customers />
         </div>
       </div>

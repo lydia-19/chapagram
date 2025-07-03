@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav
       className={`fixed left-0 top-0 z-50 w-full bg-white py-2 transition-shadow ${scrolled ? "shadow-md" : ""}`}
     >
-      <div className="xxl:px-0 container mx-auto flex items-center justify-between px-4 lg:px-12">
+      <div className="container mx-auto flex items-center justify-between px-4 lg:px-12">
         <div className="relative h-logoSm w-logoSm xl:h-logoMd xl:w-logoMd">
           <Image
             src="/images/logo.svg"

@@ -21,7 +21,7 @@ const Sharing = () => {
           Share the bot, and earn rewards for every friend you bring on board
         </Heading>
       </motion.div>
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-10">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -30,7 +30,7 @@ const Sharing = () => {
             duration: 1.5,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="relative col-span-3 hidden md:block"
+          className="relative col-span-4 hidden md:block"
         >
           <Image
             src="/images/share-left.png"
@@ -38,13 +38,13 @@ const Sharing = () => {
             width={424}
             height={586}
           />
-          <Button className="absolute bottom-1 right-3 flex aspect-square w-16 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:md:right-0 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
+          <Button className="absolute bottom-1 right-3 flex aspect-square w-12 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:md:right-2 lg:w-16 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
             <a
               href={EXTERNAL_LINKS.TELEGRAM_BOT}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ShareIcon />
+              <ShareIcon className="lg:h-10 lg:w-10 2xl:h-12 2xl:w-12" />
             </a>
           </Button>
         </motion.div>
@@ -60,9 +60,9 @@ const Sharing = () => {
           }}
           className="md:col-span-4"
         >
-          <div className="gradient-xs aspect-square h-[450px] rounded-cardSm bg-gradient-to-r from-blue-1 to-blue-2 md:h-full md:w-full">
+          <div className="gradient-xs h-[450px] rounded-cardSm bg-gradient-to-r from-blue-1 to-blue-2 md:h-[287px] md:w-full lg:h-[406px] xl:h-full">
             <div className="flex h-full items-center justify-center">
-              <PhoneWrapper className="xl:scale-85 transform md:scale-75">
+              <PhoneWrapper className="xl:scale-85 transform md:scale-75 lg:scale-90">
                 <video
                   autoPlay
                   loop
@@ -85,7 +85,7 @@ const Sharing = () => {
             duration: 1.5,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="relative col-span-3 hidden md:block"
+          className="relative col-span-4 hidden md:block"
         >
           <Image
             src="/images/share-right.png"
@@ -93,13 +93,13 @@ const Sharing = () => {
             width={424}
             height={586}
           />
-          <Button className="absolute bottom-1 right-3 flex aspect-square w-16 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:md:right-0 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
+          <Button className="absolute bottom-1 right-3 flex aspect-square w-12 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:md:right-2 lg:w-16 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
             <a
               href={EXTERNAL_LINKS.TELEGRAM_BOT}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ShareIcon />
+              <ShareIcon className="lg:h-10 lg:w-10 2xl:h-12 2xl:w-12" />
             </a>
           </Button>
         </motion.div>

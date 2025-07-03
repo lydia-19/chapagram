@@ -30,7 +30,7 @@ const TestimonyCarousel = ({
   return (
     <div className="relative flex w-full items-center justify-center lg:h-[400px]">
       {/* Current testimony (top) */}
-      <div className="absolute left-1/2 top-[-120px] z-20 -translate-x-1/2 transition-all duration-700">
+      <div className="absolute left-1/2 top-[-120px] z-20 -translate-x-1/2 transition-all duration-700 lg:left-24">
         <Testimony {...testimonies[current]} />
       </div>
       {/* Next testimony */}

@@ -10,8 +10,8 @@ import { motion } from "framer-motion";
 const SendReceive = () => {
   return (
     <div className="relative flex h-full flex-col items-center justify-between gap-6 md:flex-row lg:gap-12">
-      <div className="mb-12 w-full lg:mb-0 lg:w-[38%] lg:self-end">
-        <div className="space-y-2 lg:mb-28 lg:space-y-4">
+      <div className="mb-12 w-full lg:mb-0 lg:self-end xl:w-2/5">
+        <div className="space-y-2 lg:mb-12 lg:space-y-4 xl:mb-16">
           <Heading>
             Quick <br /> Send
           </Heading>
@@ -25,7 +25,7 @@ const SendReceive = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="hidden lg:block"
+          className="hidden md:block"
         >
           <Image
             src="/images/send.png"
@@ -40,7 +40,7 @@ const SendReceive = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-20%" }}
         transition={{ duration: 0.4 }}
-        className="flex w-full justify-center lg:w-[24%]"
+        className="flex w-full justify-center xl:w-1/5"
       >
         {/* Mobile version with ImageWrapper */}
         <div className="lg:hidden">
@@ -88,13 +88,13 @@ const SendReceive = () => {
           </PhoneWrapper>
         </motion.div>
       </motion.div>
-      <div className="flex w-full flex-col items-end self-start lg:w-[38%]">
+      <div className="flex w-full flex-col items-end self-start xl:w-2/5">
         <motion.div
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="hidden lg:block"
+          className="hidden md:block"
         >
           <Image
             src="/images/receive.png"
@@ -104,8 +104,8 @@ const SendReceive = () => {
           />
         </motion.div>
 
-        <div className="mt-6 space-y-4 text-right lg:mt-12">
-          <Heading>
+        <div className="space-y-2 lg:mt-12 lg:space-y-4 xl:mt-16">
+          <Heading className="text-right">
             Quick <br /> Request
           </Heading>
           <Paragraph>

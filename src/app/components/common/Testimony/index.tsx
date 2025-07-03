@@ -8,10 +8,10 @@ interface TestimonyProps {
 
 const Testimony = ({ image, title, description }: TestimonyProps) => {
   return (
-    <div className="bg-blue-12 w-[300px] rounded-[22px] p-[6px]">
-      <div className="bg-blue-14 rounded-[14px] p-[6px]">
+    <div className="w-[300px] rounded-[22px] bg-blue-12 p-[6px]">
+      <div className="rounded-[14px] bg-blue-14 p-[6px]">
         <div className="rounded-xl bg-white p-0.5">
-          <div className="bg-blue-14 rounded-[14px] p-[6px]">
+          <div className="rounded-[14px] bg-blue-14 p-[6px]">
             <div className="mx-auto flex max-w-xl items-center rounded-full bg-white p-1">
               <div className="mr-2 flex-shrink-0">
                 <Image
@@ -19,7 +19,7 @@ const Testimony = ({ image, title, description }: TestimonyProps) => {
                   alt="User avatar"
                   width={50}
                   height={50}
-                  className="bg-blue-13 rounded-full"
+                  className="rounded-full bg-blue-13"
                 />
               </div>
               <div className="flex flex-col">

@@ -98,7 +98,7 @@ const faqCategories = [
 
 const FAQ = () => {
   return (
-    <div className="mx-auto flex flex-col gap-5">
+    <div className="mx-auto flex max-w-xl flex-col gap-5 lg:max-w-5xl">
       <Heading className="text-center">
         Frequently Asked <br /> Questions
       </Heading>

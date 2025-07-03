@@ -40,8 +40,8 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer className="mt-20 overflow-x-hidden">
-      <div className="container mx-auto">
-        <div className="relative mx-0 flex flex-col gap-10 bg-blue-10 px-6 py-4 md:mx-6 md:flex-row md:gap-0 md:rounded-2xl xl:mx-0 2xl:py-10">
+      <div className="container mx-auto lg:px-16">
+        <div className="relative mx-0 flex flex-col gap-10 bg-blue-10 px-6 py-4 md:mx-6 md:flex-row md:rounded-2xl xl:mx-0 xl:gap-0 2xl:py-10">
           <div className="relative order-2 -mb-4 flex flex-1 items-end justify-center md:order-1 2xl:-mb-10">
             <Image
               src="/images/footer-phone.png"
@@ -65,7 +65,7 @@ const Footer = () => {
       </div>
       <div className="-mt-[20%] flex flex-col justify-end bg-blue-9 pt-[22%] text-white md:rounded-t-2xl 2xl:-mt-[10%] 2xl:pt-[12%]">
         <div className="container mx-auto px-4">
-          <div className="mb-10 flex flex-col flex-wrap items-start justify-between gap-8 px-6 md:flex-row xl:px-0">
+          <div className="mb-10 flex flex-col flex-wrap items-start justify-between gap-8 px-6 md:flex-row">
             {/* Divider */}
             <div className="mx-auto my-6 hidden w-[98%] items-center md:flex">
               <div className="h-2 w-2 rounded-full bg-gray-3"></div>

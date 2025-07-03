@@ -61,7 +61,8 @@ img {
 
 /* Mobile gradient size */
 .gradient-xs {
-  width: 330px;
+  /* width: 256px; */
+  width: 300px;
 }
 
 /* Desktop gradient sizes (xl breakpoint) */

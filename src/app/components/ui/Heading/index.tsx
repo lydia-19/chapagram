@@ -13,7 +13,7 @@ const Heading = ({
 }: HeadingProps) => {
   return (
     <Component
-      className={`text-gradient text-3xl font-bold uppercase lg:text-5xl xl:text-[80px] xl:leading-none ${className}`}
+      className={`text-gradient text-3xl font-bold uppercase md:text-4xl lg:text-5xl xl:text-[80px] xl:leading-none ${className}`}
     >
       {children}
     </Component>

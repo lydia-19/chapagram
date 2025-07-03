@@ -7,7 +7,9 @@ interface PhoneWrapperProps {
 
 const PhoneWrapper = ({ children, className = "" }: PhoneWrapperProps) => {
   return (
-    <div className={`relative w-phoneSm xl:w-phoneLg ${className}`}>
+    <div
+      className={`relative w-phoneSm lg:w-[200px] xl:w-phoneLg ${className}`}
+    >
       {/* Phone frame */}
       <div className="relative rounded-phoneSm bg-phone-frame p-phone shadow-xl xl:rounded-phoneLg">
         {/* Dynamic Island */}
@@ -17,7 +19,7 @@ const PhoneWrapper = ({ children, className = "" }: PhoneWrapperProps) => {
         </div>
 
         {/* Screen container */}
-        <div className="relative h-phoneSm w-full overflow-hidden rounded-screenSm xl:h-phoneLg xl:rounded-screenLg">
+        <div className="relative h-phoneSm w-full overflow-hidden rounded-screenSm lg:h-[415px] xl:h-phoneLg xl:rounded-screenLg">
           {/* Content */}
           {children}
         </div>
