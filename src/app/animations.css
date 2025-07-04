@@ -144,3 +144,22 @@
 .ease-smooth {
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Define a subtle animation for globe with multiple arcs */
+@keyframes arc-pulse {
+  0% {
+    stroke-dasharray: 1 200; /* Start with small dash, large gap */
+    stroke-dashoffset: 0;
+    opacity: 0.2;
+  }
+  50% {
+    stroke-dasharray: 100 1; /* Dash covers half the path */
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dasharray: 1 200; /* Back to small dash */
+    stroke-dashoffset: -200; /* Move dash along path */
+    opacity: 0.2;
+  }
+}

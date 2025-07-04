@@ -1,10 +1,10 @@
 import Heading from "@components/ui/Heading";
 import Paragraph from "@components/ui/Paragraph";
-import Image from "next/image";
 import {
   useScrollAnimation,
   getAnimationClasses,
 } from "@/hooks/useScrollAnimation";
+import GlobeWithArcs from "@components/common/GlobeWithArcs";
 
 const Global = () => {
   const titleAnimation = useScrollAnimation();
@@ -61,6 +61,7 @@ const Global = () => {
           </Paragraph>
         </div>
       </div>
+
       <div className="relative flex justify-center">
         <div
           ref={imageAnimation.ref}
@@ -70,12 +71,8 @@ const Global = () => {
             imageAnimation.isVisible,
           )}
         >
-          <Image
-            src="/images/half-globe.png"
-            alt="Global"
-            width={1000}
-            height={1000}
-          />
+          <GlobeWithArcs />
+
           <div className="pointer-events-none absolute -bottom-5 left-0 h-24 w-full bg-gradient-to-t from-white to-transparent blur-md" />
         </div>
       </div>

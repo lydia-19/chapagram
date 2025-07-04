@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        "arc-pulse": "arc-pulse 4s linear infinite",
+      },
       colors: {
         blue: {
           gradient1: "#003666",
