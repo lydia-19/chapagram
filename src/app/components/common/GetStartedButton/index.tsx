@@ -15,7 +15,7 @@ export const GetStartedButton: FC<GetStartedButtonProps> = ({
 }) => {
   return (
     <Button
-      className={`flex items-center border-4 border-[#7FA4C9]/90 ${className} ${variant === "sticky" ? "rounded-xl" : "rounded-button"}`}
+      className={`border-border-primary/90 flex items-center border-4 ${className} ${variant === "sticky" ? "rounded-xl" : "rounded-button"}`}
     >
       <a href={href} target="_blank" rel="noopener noreferrer">
         Get started

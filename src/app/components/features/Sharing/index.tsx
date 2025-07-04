@@ -63,7 +63,7 @@ const Sharing = () => {
           }}
           className="md:col-span-4"
         >
-          <div className="gradient-xs from-blue-gradient1 to-blue-gradient2 h-[450px] rounded-cardSm bg-gradient-to-br md:h-[287px] md:w-full lg:h-[406px] xl:h-full">
+          <div className="gradient-xs from-blue-gradient1 to-blue-gradient2 h-cardLg md:h-cardMd lg:h-cardSm rounded-cardSm bg-gradient-to-br md:w-full xl:h-full">
             <div className="flex h-full items-center justify-center">
               <PhoneWrapper className="xl:scale-85 transform md:scale-75 lg:scale-90">
                 <video

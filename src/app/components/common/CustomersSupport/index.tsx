@@ -4,9 +4,9 @@ import { EXTERNAL_LINKS } from "@/config/constants";
 
 const CustomersSupport = () => {
   return (
-    <div className="max-w-[200px] rounded-2xl bg-cardBg lg:max-w-card">
+    <div className="max-w-supportCard rounded-2xl bg-cardBg lg:max-w-card">
       <div className="mx-auto flex h-full w-full flex-col justify-between gap-2 px-4 py-2 lg:w-3/4 lg:px-0">
-        <Paragraph className="flex items-center text-left text-xs font-normal !leading-[100%] !text-black lg:!text-lg">
+        <Paragraph className="!leading-full flex items-center text-left text-xs font-normal !text-black lg:!text-lg">
           Any confusion, we have the best customer supports
         </Paragraph>
 

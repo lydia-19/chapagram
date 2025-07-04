@@ -32,7 +32,7 @@ const Collapse: React.FC<CollapseProps> = ({ items }) => {
               onClick={() => handleToggle(idx)}
               aria-expanded={isOpen}
             >
-              <p className="font-medium text-[#292929]">{item.question}</p>
+              <p className="text-gray-text font-medium">{item.question}</p>
               <span
                 className={`transform transition-transform duration-300 ${
                   isOpen ? "rotate-180" : "rotate-0"

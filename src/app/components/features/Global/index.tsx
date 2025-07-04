@@ -21,7 +21,7 @@ const Global = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="w-full md:w-1/3 md:max-w-[400px]"
+          className="md:max-w-content w-full md:w-1/3"
         >
           <Paragraph className="text-paragraph-md mb-2 font-semibold uppercase !text-black 2xl:text-xl">
             Seamless Global Transfers
@@ -38,7 +38,7 @@ const Global = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="w-full md:w-1/3 md:max-w-[400px] md:text-right"
+          className="md:max-w-content w-full md:w-1/3 md:text-right"
         >
           <Paragraph className="text-paragraph-md mb-2 font-semibold uppercase !text-black 2xl:text-xl">
             Fast, Secure, and Affordable

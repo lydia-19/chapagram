@@ -28,13 +28,13 @@ const TestimonyCarousel = ({
   const next = (current + 1) % testimonies.length;
 
   return (
-    <div className="relative flex w-full items-center justify-center lg:h-[400px]">
+    <div className="lg:h-testimonial relative flex w-full items-center justify-center">
       {/* Current testimony (top) */}
-      <div className="absolute left-1/2 top-[-120px] z-20 -translate-x-1/2 transition-all duration-700 lg:left-24">
+      <div className="top-testimonialTop absolute left-1/2 z-20 -translate-x-1/2 transition-all duration-700 lg:left-24">
         <Testimony {...testimonies[current]} />
       </div>
       {/* Next testimony */}
-      <div className="absolute top-[70px] z-10 -translate-x-1/2 -translate-y-1/2 transition-all duration-700 lg:left-[50px] xl:left-[200px]">
+      <div className="top-testimonialOffset lg:left-testimonialLeft xl:left-testimonialRight absolute z-10 -translate-x-1/2 -translate-y-1/2 transition-all duration-700">
         <Testimony {...testimonies[next]} />
       </div>
     </div>

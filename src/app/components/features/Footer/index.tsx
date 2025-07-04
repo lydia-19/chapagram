@@ -67,7 +67,7 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="mb-10 flex flex-col flex-wrap items-start justify-between gap-8 px-6 md:flex-row">
             {/* Divider */}
-            <div className="mx-auto my-6 hidden w-[98%] items-center md:flex">
+            <div className="w-full98 mx-auto my-6 hidden items-center md:flex">
               <div className="h-2 w-2 rounded-full bg-white/80"></div>
               <div className="w-full border-t border-white/80"></div>
               <div className="h-2 w-2 rounded-full bg-white/80"></div>
