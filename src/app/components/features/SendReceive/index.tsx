@@ -131,7 +131,7 @@ const SendReceive = () => {
           <Heading className="text-right">
             Quick <br /> Request
           </Heading>
-          <Paragraph>
+          <Paragraph className="text-right">
             Easily request money from friends or groups. Send a quick request
             through Telegram, and get paid back without the awkward reminders
           </Paragraph>
