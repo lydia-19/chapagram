@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed left-0 top-0 z-50 w-full bg-white py-2 transition-shadow ${scrolled ? "shadow-md" : ""}`}
+      className={`left-0 top-0 z-50 w-full bg-white py-2 transition-shadow md:fixed ${scrolled ? "shadow-md" : ""}`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 lg:px-12">
         <div className="relative h-logoSm w-logoSm xl:h-logoMd xl:w-logoMd">
