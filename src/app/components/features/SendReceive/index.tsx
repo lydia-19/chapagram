@@ -5,13 +5,21 @@ import Heading from "@components/ui/Heading";
 import Paragraph from "@components/ui/Paragraph";
 import ImageWrapper from "@components/common/ImageWrapper";
 import PhoneWrapper from "@components/common/PhoneWrapper";
-import { motion } from "framer-motion";
 import { useState, useRef } from "react";
+import {
+  useScrollAnimation,
+  getAnimationClasses,
+} from "@/hooks/useScrollAnimation";
 
 const SendReceive = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const mobileVideoRef = useRef<HTMLVideoElement>(null);
   const desktopVideoRef = useRef<HTMLVideoElement>(null);
+
+  const leftImageAnimation = useScrollAnimation();
+  const centerVideoAnimation = useScrollAnimation();
+  const desktopVideoAnimation = useScrollAnimation();
+  const rightImageAnimation = useScrollAnimation();
 
   const videoSources = [
     "/videos/send-money.mp4",
@@ -36,12 +44,13 @@ const SendReceive = () => {
             hassles. Just quick, secure transfers right at your fingertips.
           </Paragraph>
         </div>
-        <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="hidden md:block"
+        <div
+          ref={leftImageAnimation.ref}
+          className={getAnimationClasses(
+            "hidden md:block",
+            "fade-in-left-large duration-1000 ease-out",
+            leftImageAnimation.isVisible,
+          )}
         >
           <Image
             src="/images/send.png"
@@ -49,14 +58,15 @@ const SendReceive = () => {
             width={400}
             height={530}
           />
-        </motion.div>
+        </div>
       </div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-20%" }}
-        transition={{ duration: 0.4 }}
-        className="flex w-full justify-center xl:w-1/5"
+      <div
+        ref={centerVideoAnimation.ref}
+        className={getAnimationClasses(
+          "flex w-full justify-center xl:w-1/5",
+          "animate-on-scroll",
+          centerVideoAnimation.isVisible,
+        )}
       >
         {/* Mobile version with ImageWrapper */}
         <div className="lg:hidden">
@@ -85,16 +95,13 @@ const SendReceive = () => {
         </div>
 
         {/* Desktop version without ImageWrapper */}
-        <motion.div
-          initial={{ y: 100, scale: 0.9 }}
-          whileInView={{ y: 0, scale: 1 }}
-          viewport={{ once: true, margin: "-20%" }}
-          transition={{
-            duration: 1.2,
-            ease: [0.12, 0.23, 0.5, 1],
-            delay: 0.2,
-          }}
-          className="hidden lg:block"
+        <div
+          ref={desktopVideoAnimation.ref}
+          className={getAnimationClasses(
+            "hidden lg:block",
+            "slide-scale-up duration-1200 ease-custom delay-200",
+            desktopVideoAnimation.isVisible,
+          )}
         >
           <PhoneWrapper>
             <video
@@ -109,15 +116,16 @@ const SendReceive = () => {
               <source src={videoSources[currentVideoIndex]} type="video/mp4" />
             </video>
           </PhoneWrapper>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
       <div className="flex w-full flex-col items-end self-start xl:w-2/5">
-        <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="hidden md:block"
+        <div
+          ref={rightImageAnimation.ref}
+          className={getAnimationClasses(
+            "hidden md:block",
+            "fade-in-right-large duration-1000 ease-out",
+            rightImageAnimation.isVisible,
+          )}
         >
           <Image
             src="/images/receive.png"
@@ -125,7 +133,7 @@ const SendReceive = () => {
             width={400}
             height={530}
           />
-        </motion.div>
+        </div>
 
         <div className="space-y-2 lg:mt-12 lg:space-y-4 xl:mt-16">
           <Heading className="text-right">

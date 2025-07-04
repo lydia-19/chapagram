@@ -43,9 +43,9 @@ const Landing = () => {
         <GetStartedButton className="hidden lg:flex lg:max-w-max" />
       </div>
 
-      <div className="relative mt-6 flex flex-col items-center justify-center lg:mt-24">
+      <div className="relative mt-12 flex flex-col items-center justify-center lg:mt-24">
         <div>
-          <ImageWrapper centered imagePosition={{ top: -20 }}>
+          <ImageWrapper centered imagePosition={{ top: -30 }}>
             <PhoneWrapper>
               <video
                 autoPlay

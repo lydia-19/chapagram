@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./animations.css";
+
 :root {
   --transition-default: 0.3s ease-in-out;
 }
@@ -45,7 +47,7 @@ img {
 
 @layer components {
   .text-gradient {
-    @apply from-blue-gradient1 to-blue-gradient3 bg-gradient-to-r bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-gradient1 to-blue-gradient3 bg-clip-text text-transparent;
   }
 }
 
