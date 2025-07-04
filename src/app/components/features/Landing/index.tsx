@@ -22,7 +22,7 @@ const testimonies = [
     description: "Everything is easy to use and flexible transactions",
   },
   {
-    image: "/images/testimony-avatar-1.png",
+    image: "/images/testimony-avatar-3.jpeg",
     title: "Chapagram User",
     description: "I loved it!",
   },

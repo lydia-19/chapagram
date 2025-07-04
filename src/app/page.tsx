@@ -13,32 +13,16 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div>
-        <div className="container mx-auto mt-20 h-full space-y-12 px-4 md:px-12 lg:space-y-24">
-          <div>
-            <Landing />
-          </div>
-          <div>
-            <SendReceive />
-          </div>
-          <div>
-            <SplitBills />
-          </div>
-          <div>
-            <Shamo />
-          </div>
-          <div>
-            <Global />
-          </div>
-          <div>
-            <Sharing />
-          </div>
-          <div>
-            <FAQ />
-          </div>
-        </div>
-        <Footer />
+      <div className="container mx-auto mt-20 h-full space-y-12 px-4 md:px-12 lg:space-y-24">
+        <Landing />
+        <SendReceive />
+        <SplitBills />
+        <Shamo />
+        <Global />
+        <Sharing />
+        <FAQ />
       </div>
+      <Footer />
     </>
   );
 }
