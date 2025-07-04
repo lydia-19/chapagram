@@ -31,9 +31,7 @@ export default {
           ring: "#2A2A2A",
         },
         cardBg: "#C6DBFF99",
-        border: {
-          primary: "#7FA4C9",
-        },
+        primary: "#7FA4C9",
       },
       borderRadius: {
         cardSm: "27px",
@@ -86,18 +84,17 @@ export default {
       lineHeight: {
         full: "100%",
       },
-
       padding: {
-        phone: "12px",
+        phone: "10px",
         cardXs: "6px",
       },
       spacing: {
         cameraTop: "10px",
         cameraOffset: "32px",
-        testimonialTop: "-120px",
         testimonialOffset: "70px",
         testimonialLeft: "50px",
         testimonialRight: "200px",
+        30: "120px",
       },
     },
   },
