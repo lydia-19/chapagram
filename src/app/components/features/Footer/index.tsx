@@ -4,7 +4,7 @@ import LinkedinIcon from "@icons/Linkedin.svg";
 import TiktokIcon from "@icons/Tiktok.svg";
 import YoutubeIcon from "@icons/Youtube.svg";
 import Image from "next/image";
-import { APP_CONFIG } from "@/config/constants";
+import { APP_CONFIG, EXTERNAL_LINKS } from "@/config/constants";
 import GetStartedButton from "@components/common/GetStartedButton";
 import Heading from "@components/ui/Heading";
 import Paragraph from "@components/ui/Paragraph";
@@ -41,7 +41,7 @@ const Footer = () => {
   return (
     <footer className="mt-20 overflow-x-hidden">
       <div className="container mx-auto lg:px-16">
-        <div className="bg-blue-footerBox relative mx-0 flex flex-col gap-10 px-6 py-4 md:mx-6 md:flex-row md:rounded-2xl xl:mx-0 xl:gap-0 2xl:py-10">
+        <div className="relative mx-0 flex flex-col gap-10 bg-blue-footerBox px-6 py-4 md:mx-6 md:flex-row md:rounded-2xl xl:mx-0 xl:gap-0 2xl:py-10">
           <div className="relative order-2 -mb-4 flex flex-1 items-end justify-center md:order-1 2xl:-mb-10">
             <Image
               src="/images/footer-phone.png"
@@ -63,11 +63,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-blue-footerTop -mt-[20%] flex flex-col justify-end pt-[22%] text-white md:rounded-t-2xl 2xl:-mt-[10%] 2xl:pt-[12%]">
+      <div className="-mt-[20%] flex flex-col justify-end bg-blue-footerTop pt-[22%] text-white md:rounded-t-2xl 2xl:-mt-[10%] 2xl:pt-[12%]">
         <div className="container mx-auto px-4">
           <div className="mb-10 flex flex-col flex-wrap items-start justify-between gap-8 px-6 md:flex-row">
             {/* Divider */}
-            <div className="w-full98 mx-auto my-6 hidden items-center md:flex">
+            <div className="mx-auto my-6 hidden w-full98 items-center md:flex">
               <div className="h-2 w-2 rounded-full bg-white/80"></div>
               <div className="w-full border-t border-white/80"></div>
               <div className="h-2 w-2 rounded-full bg-white/80"></div>
@@ -90,7 +90,7 @@ const Footer = () => {
               <ul className="m-0 list-none p-0 leading-8">
                 <li>
                   <a
-                    href="#"
+                    href={`tel:${EXTERNAL_LINKS.CUSTOMER_SUPPORT_NUMBER}`}
                     className="text-sm text-white no-underline opacity-80 hover:underline lg:text-base"
                   >
                     Customer support
@@ -98,7 +98,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://chapa.co/terms"
                     className="text-sm text-white no-underline opacity-80 hover:underline lg:text-base"
                   >
                     Terms & Conditions
@@ -106,7 +106,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://chapa.co/privacy"
                     className="text-sm text-white no-underline opacity-80 hover:underline lg:text-base"
                   >
                     Privacy policy
@@ -139,7 +139,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="bg-blue-footerBox fixed bottom-0 left-0 right-0 z-50 flex flex-col justify-stretch px-6 py-3 md:hidden">
+        <div className="fixed bottom-0 left-0 right-0 z-50 flex flex-col justify-stretch bg-blue-footerBox px-6 py-3 md:hidden">
           <GetStartedButton variant="sticky" />
         </div>
       </div>
