@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto mt-20 h-full space-y-12 px-4 md:px-12 lg:space-y-24">
+      <div className="container mx-auto h-full space-y-12 px-4 md:px-12 lg:space-y-24">
         <Landing />
         <SendReceive />
         <SplitBills />

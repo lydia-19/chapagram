@@ -97,7 +97,7 @@ export default {
         testimonialOffset: "70px",
         testimonialLeft: "50px",
         testimonialRight: "200px",
-        30: "120px",
+        30: "103px",
       },
     },
   },

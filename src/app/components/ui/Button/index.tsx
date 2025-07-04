@@ -12,7 +12,7 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const baseStyles =
-    "inline-flex items-center justify-center px-3 py-1 md:px-4 md:py-2 text-xs md:text-sm font-medium transition-all ease-in-out duration-500 xl:px-6 xl:text-base transform hover:shadow-xl hover:shadow-blue-500/25 active:scale-95 active:translate-y-0";
+    "inline-flex items-center justify-center text-xs md:text-sm font-semibold transition-all ease-in-out duration-500 xl:text-xl transform hover:shadow-xl hover:shadow-blue-500/25 active:scale-95 active:translate-y-0";
 
   const variantStyles = {
     primary:

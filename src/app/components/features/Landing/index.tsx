@@ -30,7 +30,7 @@ const testimonies = [
 
 const Landing = () => {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="mt-10 flex flex-col gap-6 md:mt-28 lg:mt-36">
       <div className="mx-auto flex flex-col items-center justify-center space-y-4 lg:space-y-8">
         <Heading as="h1" className="text-center">
           One Telegram bot <br /> total payment <br /> freedom
@@ -45,7 +45,7 @@ const Landing = () => {
 
       <div className="relative mt-12 flex flex-col items-center justify-center lg:mt-24">
         <div>
-          <ImageWrapper centered imagePosition={{ top: -30 }}>
+          <ImageWrapper centered imagePosition={{ top: -50 }}>
             <PhoneWrapper>
               <video
                 autoPlay
