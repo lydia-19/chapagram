@@ -20,7 +20,7 @@ const CustomersSupport = () => {
           <div className="flex flex-col items-center justify-end">
             <a
               href={`tel:${EXTERNAL_LINKS.CUSTOMER_SUPPORT_NUMBER}`}
-              className="flex w-14 justify-center rounded-2xl bg-blue-7 text-xs text-black lg:text-sm"
+              className="flex w-14 justify-center rounded-2xl bg-blue-300 text-xs text-black lg:text-sm"
             >
               {EXTERNAL_LINKS.CUSTOMER_SUPPORT_NUMBER}
             </a>

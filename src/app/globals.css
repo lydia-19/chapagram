@@ -45,7 +45,7 @@ img {
 
 @layer components {
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-1 to-blue-11 bg-clip-text text-transparent;
+    @apply from-blue-gradient1 to-blue-gradient3 bg-gradient-to-r bg-clip-text text-transparent;
   }
 }
 

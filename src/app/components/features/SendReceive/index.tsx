@@ -6,8 +6,24 @@ import Paragraph from "@components/ui/Paragraph";
 import ImageWrapper from "@components/common/ImageWrapper";
 import PhoneWrapper from "@components/common/PhoneWrapper";
 import { motion } from "framer-motion";
+import { useState, useRef } from "react";
 
 const SendReceive = () => {
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const mobileVideoRef = useRef<HTMLVideoElement>(null);
+  const desktopVideoRef = useRef<HTMLVideoElement>(null);
+
+  const videoSources = [
+    "/videos/send-money.mp4",
+    "/videos/request-money.mp4",
+    "/videos/remittance.mp4",
+  ];
+
+  const handleVideoEnd = () => {
+    const nextIndex = (currentVideoIndex + 1) % videoSources.length;
+    setCurrentVideoIndex(nextIndex);
+  };
+
   return (
     <div className="relative flex h-full flex-col items-center justify-between gap-6 md:flex-row lg:gap-12">
       <div className="mb-12 w-full lg:mb-0 lg:self-end xl:w-2/5">
@@ -51,13 +67,18 @@ const SendReceive = () => {
           >
             <PhoneWrapper>
               <video
+                key={`mobile-${currentVideoIndex}`}
+                ref={mobileVideoRef}
                 autoPlay
-                loop
                 muted
                 playsInline
+                onEnded={handleVideoEnd}
                 className="h-full w-full object-cover"
               >
-                <source src="/videos/send-receive.mp4" type="video/mp4" />
+                <source
+                  src={videoSources[currentVideoIndex]}
+                  type="video/mp4"
+                />
               </video>
             </PhoneWrapper>
           </ImageWrapper>
@@ -77,13 +98,15 @@ const SendReceive = () => {
         >
           <PhoneWrapper>
             <video
+              key={`desktop-${currentVideoIndex}`}
+              ref={desktopVideoRef}
               autoPlay
-              loop
               muted
               playsInline
+              onEnded={handleVideoEnd}
               className="h-full w-full object-cover"
             >
-              <source src="/videos/send-receive.mp4" type="video/mp4" />
+              <source src={videoSources[currentVideoIndex]} type="video/mp4" />
             </video>
           </PhoneWrapper>
         </motion.div>

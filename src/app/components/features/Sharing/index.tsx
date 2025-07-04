@@ -38,13 +38,16 @@ const Sharing = () => {
             width={424}
             height={586}
           />
-          <Button className="absolute bottom-1 right-3 flex aspect-square w-12 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:md:right-2 lg:w-16 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
+          <Button className="bg-blue-btn hover:bg-blue-btn/90 absolute bottom-1 right-3 flex aspect-square w-12 items-center justify-center rounded-full max-xl:md:right-2 lg:w-16 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
             <a
               href={EXTERNAL_LINKS.TELEGRAM_BOT}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ShareIcon className="lg:h-10 lg:w-10 2xl:h-12 2xl:w-12" />
+              <ShareIcon
+                className="lg:h-10 lg:w-10 2xl:h-12 2xl:w-12"
+                aria-label="Share on Telegram"
+              />
             </a>
           </Button>
         </motion.div>
@@ -60,7 +63,7 @@ const Sharing = () => {
           }}
           className="md:col-span-4"
         >
-          <div className="gradient-xs h-[450px] rounded-cardSm bg-gradient-to-r from-blue-1 to-blue-2 md:h-[287px] md:w-full lg:h-[406px] xl:h-full">
+          <div className="gradient-xs from-blue-gradient1 to-blue-gradient2 h-[450px] rounded-cardSm bg-gradient-to-br md:h-[287px] md:w-full lg:h-[406px] xl:h-full">
             <div className="flex h-full items-center justify-center">
               <PhoneWrapper className="xl:scale-85 transform md:scale-75 lg:scale-90">
                 <video
@@ -70,7 +73,7 @@ const Sharing = () => {
                   playsInline
                   className="h-full w-full object-cover"
                 >
-                  <source src="/videos/vid-1.mp4" type="video/mp4" />
+                  <source src="/videos/referral.mp4" type="video/mp4" />
                 </video>
               </PhoneWrapper>
             </div>
@@ -93,13 +96,16 @@ const Sharing = () => {
             width={424}
             height={586}
           />
-          <Button className="absolute bottom-1 right-3 flex aspect-square w-12 items-center justify-center rounded-full bg-blue-5 hover:bg-blue-5/90 max-xl:md:right-2 lg:w-16 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
+          <Button className="bg-blue-btn hover:bg-blue-btn/90 absolute bottom-1 right-3 flex aspect-square w-12 items-center justify-center rounded-full max-xl:md:right-2 lg:w-16 xl:w-roundBtnSm 2xl:bottom-0 2xl:w-roundBtnLg">
             <a
               href={EXTERNAL_LINKS.TELEGRAM_BOT}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ShareIcon className="lg:h-10 lg:w-10 2xl:h-12 2xl:w-12" />
+              <ShareIcon
+                className="lg:h-10 lg:w-10 2xl:h-12 2xl:w-12"
+                aria-label="Share on Telegram"
+              />
             </a>
           </Button>
         </motion.div>

@@ -84,7 +84,7 @@ const faqCategories = [
         our support team through
         <a
           href={EXTERNAL_LINKS.TELEGRAM_BOT}
-          className="ml-1 text-blue-6"
+          className="ml-1 text-blue-400"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -111,7 +111,7 @@ const FAQ = () => {
         More questions?{" "}
         <a
           href={`tel:${EXTERNAL_LINKS.CUSTOMER_SUPPORT_NUMBER}`}
-          className="bg-transparent text-blue-6"
+          className="bg-transparent text-blue-400"
         >
           Contact us
         </a>
